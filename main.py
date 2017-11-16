@@ -63,7 +63,7 @@ class ImageSplit:
         return self._find_slice_line(start_height - 100)
 
     def _split_image_to_parts(self):
-        last_height = self.split_size
+        last_height = 0
         while (last_height + self.split_size) < self.height:
             slice_height = self._find_slice_line(last_height + self.split_size)
             self._copy_selected_part(last_height, slice_height)
@@ -88,4 +88,4 @@ class ImageSplit:
 if __name__ == "__main__":
     #path = input("enter path to image>:")
     image_split = ImageSplit()
-    image_split.split_image("./test2.jpg")
+    image_split.split_image("./test3.jpg")
